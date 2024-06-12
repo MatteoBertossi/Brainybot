@@ -1,36 +1,39 @@
-# Automated Web Interaction Script
-This script automates interactions with a web application using Selenium WebDriver. It performs tasks such as logging in, adding documents to a bucket, analyzing file statuses, creating an AI, and translating text.
+# Project Title
+
+Brief description of what the project does and its purpose.
 
 ## Requirements
-Python 3.6+
-Selenium
-WebDriver Manager for Chrome
-Google Chrome
+
+- Requirement 1
+- Requirement 2
+- Requirement 3
 
 ## Installation
+
 1. Clone the repository:
 
-'''sh
-git clone https://github.com/yourusername/yourrepository.git
-cd yourrepository
-'''
+    ```sh
+    git clone https://github.com/yourusername/yourrepository.git
+    cd yourrepository
+    ```
 
-2.Install the required packages:
+2. Install the required packages:
 
-'''sh
-pip install selenium webdriver-manager
-'''
+    ```sh
+    pip install selenium webdriver-manager
+    ```
 
 ## Usage
 
 1. Update the login credentials and file paths in the script.
 
 2. Run the script:
-   '''sh
-   python script_name.py
-'''
 
-# Script Details
+    ```sh
+    python script_name.py
+    ```
+
+## Script Details
 ## Initialization
 The WebDriver is initialized with the following code:
 
