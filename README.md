@@ -54,7 +54,6 @@ driver = webdriver.Chrome(service=service)
 Logs into the web application using the provided username and password.
 
 '''python
-
 def login(username, password):
     try:
         driver.get('https://demo.brainyware.ai/dash/fs')  # Replace with the desired URL
@@ -77,14 +76,12 @@ def login(username, password):
         time.sleep(10)  # Increased sleep time
     except Exception as e:
         print(f"An error occurred during login: {e}")
-
 '''
 
 'add_bucket_and_document()'
 Adds a new bucket and uploads documents. It periodically checks the status of the files and creates an AI for translation.
 
 '''python
-
 def add_bucket_and_document():
     try:
         wait = WebDriverWait(driver, 20)  # Increased wait time
@@ -143,14 +140,12 @@ def add_bucket_and_document():
             delete_bucket()
     except Exception as e:
         print(f"An error occurred: {e}")
-
 '''
 
 'upload_documents(file_paths)'
 Uploads a list of documents to the bucket.
 
 '''python
-
 def upload_documents(file_paths):
     try:
         wait = WebDriverWait(driver, 20)  # Increased wait time
@@ -189,14 +184,12 @@ def upload_documents(file_paths):
     except Exception as e:
         print(f"An error occurred while uploading the documents: {e}")
         return False
-
 '''
 
 'analyze_files()'
 Analyzes the status of the uploaded files to determine if they are trained, failed, or still processing.
 
 '''python
-
 def analyze_files():
     try:
         wait = WebDriverWait(driver, 20)  # Increased wait time
@@ -250,14 +243,12 @@ Clicks an element using JavaScript.
 '''python
 def click_element_with_js(element):
     driver.execute_script("arguments[0].click();", element)
-
 '''
 
 create_ai_and_translate()
 Creates an AI and sends a translation instruction.
 
 '''python
-
 def create_ai_and_translate():
     try:
         wait = WebDriverWait(driver, 20)  # Increased wait time
@@ -314,7 +305,6 @@ def create_ai_and_translate():
 
     except Exception as e:
         print(f"An error occurred during AI creation and translation: {e}")
-
 '''
 
 'go_back()'
@@ -333,7 +323,6 @@ def go_back():
 Deletes the created AI.
 
 '''python
-
 def delete_ai():
     try:
         wait = WebDriverWait(driver, 10)
@@ -415,7 +404,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 '''
 
 
