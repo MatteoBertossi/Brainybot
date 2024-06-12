@@ -37,7 +37,7 @@ Brief description of what the project does and its purpose.
 ## Initialization
 The WebDriver is initialized with the following code:
 
-'''python
+```python
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
@@ -49,14 +49,14 @@ import time
 
 service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service)
-'''
+```
 
 ## Functions
 
 'login(username, password)'
 Logs into the web application using the provided username and password.
 
-'''python
+```python
 def login(username, password):
     try:
         driver.get('https://demo.brainyware.ai/dash/fs')  # Replace with the desired URL
@@ -79,12 +79,12 @@ def login(username, password):
         time.sleep(10)  # Increased sleep time
     except Exception as e:
         print(f"An error occurred during login: {e}")
-'''
+```
 
 'add_bucket_and_document()'
 Adds a new bucket and uploads documents. It periodically checks the status of the files and creates an AI for translation.
 
-'''python
+```python
 def add_bucket_and_document():
     try:
         wait = WebDriverWait(driver, 20)  # Increased wait time
@@ -143,12 +143,12 @@ def add_bucket_and_document():
             delete_bucket()
     except Exception as e:
         print(f"An error occurred: {e}")
-'''
+```
 
 'upload_documents(file_paths)'
 Uploads a list of documents to the bucket.
 
-'''python
+```python
 def upload_documents(file_paths):
     try:
         wait = WebDriverWait(driver, 20)  # Increased wait time
@@ -187,12 +187,12 @@ def upload_documents(file_paths):
     except Exception as e:
         print(f"An error occurred while uploading the documents: {e}")
         return False
-'''
+```
 
 'analyze_files()'
 Analyzes the status of the uploaded files to determine if they are trained, failed, or still processing.
 
-'''python
+```python
 def analyze_files():
     try:
         wait = WebDriverWait(driver, 20)  # Increased wait time
@@ -237,21 +237,21 @@ def analyze_files():
     except Exception as e:
         print(f"An error occurred while analyzing files: {e}")
         raise
-'''
+```
 
 
 'click_element_with_js(element)'
 Clicks an element using JavaScript.
 
-'''python
+```python
 def click_element_with_js(element):
     driver.execute_script("arguments[0].click();", element)
-'''
+```
 
 create_ai_and_translate()
 Creates an AI and sends a translation instruction.
 
-'''python
+```python
 def create_ai_and_translate():
     try:
         wait = WebDriverWait(driver, 20)  # Increased wait time
@@ -308,24 +308,24 @@ def create_ai_and_translate():
 
     except Exception as e:
         print(f"An error occurred during AI creation and translation: {e}")
-'''
+```
 
 'go_back()'
 Navigates back to the previous page.
 
-'''python
+```python
 def go_back():
     try:
         driver.back()
         print("Navigated back")
     except Exception as e:
         print(f"An error occurred while navigating back: {e}")       
-'''
+```
 
 'delete_ai()'
 Deletes the created AI.
 
-'''python
+```python
 def delete_ai():
     try:
         wait = WebDriverWait(driver, 10)
@@ -356,13 +356,13 @@ def delete_ai():
 
     except Exception as e:
         print(f"An error occurred during AI and bucket deletion: {e}")
-'''
+```
 
 
 'delete_bucket()'
 Deletes the created bucket.
 
-'''python
+```python
 def delete_bucket():
     try:
         wait = WebDriverWait(driver, 20)  # Increased wait time
@@ -385,7 +385,7 @@ def delete_bucket():
 
     except Exception as e:
         print(f"An error occurred during bucket deletion: {e}")
-'''
+```
 
 
 
@@ -393,7 +393,7 @@ def delete_bucket():
 The script starts executing from the 'main()' function:
 
 
-'''python
+```python
 def main():
     # Example usage
     login('your_username', 'your_password')
@@ -407,7 +407,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-'''
+```
 
 
 
