@@ -316,7 +316,7 @@ def delete_bucket():
 
 def main():
     # Example usage
-    login('galante@ovr.ai', 'Password1!')
+    login('', '')
     add_bucket_and_document()
 
     print("Script execution finished. The browser remains open for inspection.")
