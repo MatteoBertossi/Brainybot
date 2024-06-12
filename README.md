@@ -1,12 +1,14 @@
-# Project Title
+# Automated Web Interaction Script
+This script automates interactions with a
 
-Brief description of what the project does and its purpose.
+web application using Selenium WebDriver. It performs tasks such as logging in, adding documents to a bucket, analyzing file statuses, creating an AI, and translating text.
 
 ## Requirements
+1. Python 3.6+
+2. Selenium
+3. WebDriver Manager for Chrome
+4. Google Chrome
 
-- Requirement 1
-- Requirement 2
-- Requirement 3
 
 ## Installation
 
